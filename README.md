@@ -13,5 +13,5 @@
 3. Write a Bash script which accepts  name as input and displays the greeting "Welcome (name)"
 ```
     read first_name
-    echo "Welcome $first_name
+    echo "Welcome $first_name"
 ```
