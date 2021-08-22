@@ -36,3 +36,49 @@
     echo $(($X * $Y))
     echo $(($X / $Y))
 ```
+6. Given two integers,  X and Y, identify whether X < Y or X > Y or X = Y .
+```bash
+    read X
+    read Y
+
+    if [ $X -eq $Y ]
+    then
+        echo "X is equal to Y"
+    elif [ $X -gt $Y ]
+    then 
+        echo "X is greater than Y"
+    else
+        echo "X is less than Y"
+    fi
+```
+7. Read in one character from STDIN. If the character is 'Y' or 'y' display "YES". If the character is 'N' or 'n' display "NO".
+```bash
+    read ch
+    if [ $ch  = 'y' -o $ch = 'Y' ]
+    then 
+        echo "YES"
+    else 
+        echo "NO"
+    fi
+```
+8. Given three integers (X, Y, and Z) representing the three sides of a triangle, identify whether the triangle is scalene, isosceles, or equilateral.
+```bash
+    read X
+    read Y
+    read Z
+    if [ $X -eq $Y ] && [ $Y -eq $Z ]
+    then
+        echo "EQUILATERAL"
+    elif [ $X -ne $Y ] &&  [ $Y -ne $Z ] && [ $X -ne $Z ]
+    then
+        echo "SCALENE"
+    else
+        echo "ISOSCELES"
+fi
+```
+9. A mathematical expression containing +,-,*,^, / and parenthesis will be provided. Read in the expression, then evaluate it. Display the result rounded to  3 decimal places
+```bash
+    read element
+    echo $element | bc -l | xargs printf "%.3f\n"
+```
+10. 
