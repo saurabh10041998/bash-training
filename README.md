@@ -74,11 +74,10 @@
         echo "SCALENE"
     else
         echo "ISOSCELES"
-fi
+    fi
 ```
 9. A mathematical expression containing +,-,*,^, / and parenthesis will be provided. Read in the expression, then evaluate it. Display the result rounded to  3 decimal places
 ```bash
     read element
     echo $element | bc -l | xargs printf "%.3f\n"
-```
-10. 
+``` 
