@@ -81,3 +81,63 @@
     read element
     echo $element | bc -l | xargs printf "%.3f\n"
 ``` 
+10. Given N integers, compute their average, rounded to three decimal places.
+```bash
+    #! /bin/bash
+    read N
+    i=1
+    x=0
+    sum=0
+    while [ $i -le $N ]
+    do
+        read x
+        sum=$(( $sum + $x ))
+        i=$(( $i + 1 ))
+    done
+    echo "$sum/$N" | bc -l | xargs printf "%.3f\n"
+```
+
+11. Given  N lines of input, print the  3rd character from each line as a new line of output. It is guaranteed that each of the N  lines of input will have a  3rd character.
+```bash
+    #! /bin/bash
+    while read line
+    do
+        echo $line | cut -c 3
+    done
+```
+
+12. Display the 2nd  and 7th  character from each line of text.
+```bash
+    #! /bin/bash
+    while read line
+    do
+        echo $line | cut -c 2,7
+    done
+```
+
+13. Display a range of characters starting at the  2nd position of a string and ending at the  7th position (both positions included).
+```bash
+    #! /bin/bash
+    while read line
+    do
+        echo $line | cut -c 2-7
+    done
+```
+
+14. Display the first four characters from each line of text.
+```bash
+    #! /bin/bash
+    while read line
+    do 
+        echo $line | cut -c -4
+    done
+```
+
+15. Given a tab delimited file with several columns (tsv format) print the first three fields.
+```bash
+    #! /bin/bash
+    while read line
+    do
+        echo -e "$line" | cut -f -3
+    done
+```
