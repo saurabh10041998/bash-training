@@ -141,3 +141,40 @@
         echo -e "$line" | cut -f -3
     done
 ```
+16. Print the characters from thirteenth position to the end.
+```bash
+    #! /bin/bash
+    while read line
+    do 
+            echo $line | cut -c 13-
+    done
+```
+17. Given a sentence, identify and display its fourth word. Assume that the space (' ') is the only delimiter between words.
+```bash
+    #! /bin/bash
+    while read line
+    do
+        echo $line | cut -d' ' -f4
+    done
+```
+18. Given a sentence, identify and display its first three words. Assume that the space (' ') is the only delimiter between words.
+```bash
+    #! /bin/bash
+    while read line
+    do
+        echo $line | cut -d' ' -f1-3
+    done     
+```
+19. Given a tab delimited file with several columns (tsv format) print the fields from second fields to last field.
+```bash
+    # /bin/bash
+    while read line
+    do
+        echo -e "$line" | cut -f2-
+    done
+```
+20. In this challenge, we practice using the head command to display the first  n lines of a text file.
+Display the first  20 lines of an input file
+```bash
+   cat file |  head -20
+```
