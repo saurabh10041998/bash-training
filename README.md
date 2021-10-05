@@ -178,3 +178,43 @@ Display the first  20 lines of an input file
 ```bash
    cat file |  head -20
 ```
+21. Display the first 20 characters in input file.
+```bash
+    cat | head -c 20
+```
+22. Display the lines (from line number 12 to 22, both inclusive) of a given text file.
+```bash
+    cat | head -n 22 | tail -n +12
+```
+23. Display last 20 lines of the input file
+```bash
+    cat | tail -n 20
+```
+24. Display last 20 characters of the input file
+```bash
+    cat | tail -c 20
+```
+25. Replace the all occurances of '()' to '[]' in the file
+```bash
+    cat | tr "()" "[]"
+```
+26. In a given fragment of text, delete all the lowercase characters a - z.
+```bash
+    cat | tr -d '[:lower:]'
+```
+27. In a given fragment of text, replace all sequences of multiple spaces with just one space.
+```bash
+    cat | tr -s  " "
+```
+28. Given a text file, order the lines in lexicographical order.
+```bash
+    cat | sort -u
+```
+29. Given a text file, order the lines in reverse lexicographical order (i.e. Z-A instead of A-Z).
+```bash
+    cat | sort -ru
+```
+30. You are given a text file where each line contains a number. The numbers may be either an integer or have decimal places. There will be no extra characters other than the number or the newline at the end of each line. Sort the lines in ascending order - so that the first line holds the numerically smallest number, and the last line holds the numerically largest number.
+```bash
+    cat | sort -n
+```
