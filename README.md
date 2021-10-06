@@ -218,3 +218,19 @@ Display the first  20 lines of an input file
 ```bash
     cat | sort -n
 ```
+31. You are given a file of text, where each line contains a number (which may be either an integer or have decimal places). There will be no extra characters other than the number or the newline at the end of each line. Sort the lines in <strong>descending</strong> order - - such that the first line holds the (numerically) largest number and the last line holds the (numerically) smallest number.
+```bash
+    cat | sort -nr
+```
+32. You are given a file of text,which contains temperature information about American cities, in TSV (tab-separated) format. The first column is the name of the city and the next four columns are the average temperature in the months of Jan, Feb, March and April (see the sample input). Rearrange the rows of the table in descending order of the values for the average temperature in January.
+```bash
+    cat | sort -t$'\t' -nr -k2
+```
+33. You are given a file of tab separated weather data (TSV). There is no header column in this data file. The first five columns of this data are: (a) the name of the city (b) the average monthly temperature in Jan (in Fahreneit). (c) the average monthly temperature in April (in Fahreneit). (d) the average monthly temperature in July (in Fahreneit). (e) the average monthly temperature in October (in Fahreneit).You need to sort this file in ascending order of the second column (i.e. the average monthly temperature in January).
+```bash
+    cat | sort -t$'\t' -n -k2
+```
+34. You are given a file of pipe-delimited weather data (TSV). There is no header column in this data file. The first five columns of this data are: (a) the name of the city (b) the average monthly temperature in Jan (in Fahreneit). (c) the average monthly temperature in April (in Fahreneit). (d) the average monthly temperature in July (in Fahreneit). (e) the average monthly temperature in October (in Fahreneit).You need to sort this file in descending order of the second column (i.e. the average monthly temperature in January).
+```bash
+    cat | sort -t '|' -nr -k2
+```
